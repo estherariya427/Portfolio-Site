@@ -8,6 +8,8 @@
   --lightsea-green: #20B2AA;
   --crayola: #edc655;
   --yellow-green: #fcffad;
+  --french-blue: #3a4660;
+  --comfortably-tan: #c9af98;
   --orange: #f76414;
   --width: 700px;
 }
@@ -17,22 +19,27 @@ body {
         font-weight: 400;
         font-size: 16px;
         line-height: 1.6;
-        background-image: url('../img/background_pic7.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 1150px;
+        background-color: var(--comfortably-tan);
+        color: var(--french-blue);
+        height: 100%;
         padding: 20px;
+        margin: 0;
 }
 
 a {
   color: var(--primary-color);
 }
 
+.content {
+  min-height: 100%;
+}
+
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: var(--french-blue);
+  color: var(--white);
 }
 
 .page-header__item {
@@ -140,6 +147,10 @@ a:hover, a:focus {
 .profile {
   max-width: var(--width);
   margin: 0 auto;
+  padding: 20px;
+  padding-top: 130px;
+  padding-bottom: 50px;
+  min-height: calc(90vh - 70px);
 }
 
 .profile_pic {
@@ -153,6 +164,11 @@ a:hover, a:focus {
   max-width: var(--width);
   margin: 0 auto;
   text-align: center;
+  min-height: calc(100vh - 70px);
+}
+
+section {
+  min-height: calc(100vh - 10px);
 }
 
 ul {
@@ -221,17 +237,29 @@ button:hover, button:focus {
   color: var(--dark-grey);
 }
 
+.contact_page {
+  margin-top: 100px;
+  text-align: center;
+  min-height: calc(75vh - 70px);
+}
+
 .contact_info {
-  padding-left: 20px;
-  max-width: var(--width);
+  text-align: left;
+  display: block;
+}
+
+.standard-label {
+  width: 100px;
+  display: inline-block;
+  text-align: left;
 }
 
 form {
   position: relative;
-  width: 80%;
+  width: 62%;
   height: 370px;
   margin: 5 auto;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 input[type="email"], input[type="tel"], textarea  {
@@ -242,7 +270,6 @@ input[type="email"], input[type="tel"], textarea  {
   padding: 10px;
   margin: 10px 0px 10px 10px;
   width: 400px;
-  display: block;
   border: none;
   background-color: var(--white);
 }
@@ -251,11 +278,12 @@ input[type="submit"] {
   padding: 8px;
   color: var(--white);
   display: inline-block;
-  margin: 10px 0px 10px 10px;
+  margin: 10px 0 0 115px;
   background-color: var(--lightsea-green);
   text-align: center;
   border-radius: 5px;
   border: none;
+  width: 400px;
 }
 
 input[type="submit"]:hover {
@@ -275,6 +303,10 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--french-blue);
+  color: var(--white);
+  height: 100px;
+  margin-top: -50px;
 }
 
 @media all and (max-width: 500px) {
